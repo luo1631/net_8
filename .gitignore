@@ -1,0 +1,40 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files (large)
+*.pth
+*.pkl
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.gz
+*.zip
+*.tar
+*.ubyte
+*.ubyte.gz
+
+# Dataset directories
+_data/FashionMNIST/
+_data/cifar-10-batches-py/
+_data/fra-eng/
+
+# Training runs (TensorBoard logs)
+**/runs/
+**/checkpoints/

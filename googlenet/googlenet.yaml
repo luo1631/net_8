@@ -1,0 +1,511 @@
+GoogLeNet(
+  (conv1): BasicConv2d(
+    (conv): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (maxpool1): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (conv2): BasicConv2d(
+    (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (conv3): BasicConv2d(
+    (conv): Conv2d(64, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (maxpool2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception3a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(192, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(192, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(16, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (inception3b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(128, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(256, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (maxpool3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception4a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(480, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(480, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(96, 208, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(208, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(480, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(16, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(16, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(480, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (aux1): InceptionAux(
+    (conv): BasicConv2d(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (relu): ReLU(inplace=True)
+    (fc2): Linear(in_features=1024, out_features=10, bias=True)
+    (dropout): Dropout(p=0.7, inplace=False)
+  )
+  (inception4b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(112, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(112, 224, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(24, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(24, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+       (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (inception4c): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(24, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(24, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (inception4d): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(112, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(144, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(144, 288, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(288, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+    (aux2): InceptionAux(
+    (conv): BasicConv2d(
+      (conv): Conv2d(528, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (relu): ReLU(inplace=True)
+    (fc2): Linear(in_features=1024, out_features=10, bias=True)
+    (dropout): Dropout(p=0.7, inplace=False)
+  )
+  (inception4e): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(528, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(528, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(528, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(528, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (maxpool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception5a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(832, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (inception5b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(832, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(48, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+  )
+  (aux1): InceptionAux(
+    (conv): BasicConv2d(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc2): Linear(in_features=1024, out_features=10, bias=True)
+    (dropout): Dropout(p=0.7, inplace=False)
+  )
+  (aux2): InceptionAux(
+    (conv): BasicConv2d(
+      (conv): Conv2d(528, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+    )
+    (fc1): Linear(in_features=2048, out_features=1024, bias=True)
+    (fc2): Linear(in_features=1024, out_features=10, bias=True)
+    (dropout): Dropout(p=0.7, inplace=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=1024, out_features=10, bias=True)
+)
+
+参数量: 9,945,566
+
+Layer                                    Output Shape
+-----------------------------------------------------------------
+Input                                    [2, 3, 224, 224]
+-----------------------------------------------------------------
+conv1.conv                               [2, 64, 112, 112]        
+maxpool1                                 [2, 64, 56, 56]
+conv2.conv                               [2, 64, 56, 56]
+conv3.conv                               [2, 192, 56, 56]
+maxpool2                                 [2, 192, 28, 28]
+inception3a.branch1.conv                 [2, 64, 28, 28]
+inception3a.branch2.0.conv               [2, 96, 28, 28]
+inception3a.branch2.1.conv               [2, 128, 28, 28]
+inception3a.branch3.0.conv               [2, 16, 28, 28]
+inception3a.branch3.1.conv               [2, 32, 28, 28]
+inception3a.branch4.0                    [2, 192, 28, 28]
+inception3a.branch4.1.conv               [2, 32, 28, 28]
+inception3b.branch1.conv                 [2, 128, 28, 28]
+inception3b.branch2.0.conv               [2, 128, 28, 28]
+inception3b.branch2.1.conv               [2, 192, 28, 28]
+inception3b.branch3.0.conv               [2, 32, 28, 28]
+inception3b.branch3.1.conv               [2, 96, 28, 28]
+inception3b.branch4.0                    [2, 256, 28, 28]
+inception3b.branch4.1.conv               [2, 64, 28, 28]
+maxpool3                                 [2, 480, 14, 14]
+inception4a.branch1.conv                 [2, 192, 14, 14]
+inception4a.branch2.0.conv               [2, 96, 14, 14]
+inception4a.branch2.1.conv               [2, 208, 14, 14]
+inception4a.branch3.0.conv               [2, 16, 14, 14]
+inception4a.branch3.1.conv               [2, 48, 14, 14]
+inception4a.branch4.0                    [2, 480, 14, 14]
+inception4a.branch4.1.conv               [2, 64, 14, 14]
+aux1.conv.conv                           [2, 128, 4, 4]          
+aux1.conv.bn                             [2, 128, 4, 4]          
+aux1.conv.relu                           [2, 128, 4, 4]          
+aux1.fc1                                 [2, 1024]               
+aux1.relu                                [2, 1024]               
+aux1.dropout                             [2, 1024]               
+aux1.fc2                                 [2, 10] 
+inception4b.branch1.conv                 [2, 160, 14, 14]
+inception4b.branch2.0.conv               [2, 112, 14, 14]
+inception4b.branch2.1.conv               [2, 224, 14, 14]
+inception4b.branch3.0.conv               [2, 24, 14, 14]
+inception4b.branch3.1.conv               [2, 64, 14, 14]
+inception4b.branch4.0                    [2, 512, 14, 14]
+inception4b.branch4.1.conv               [2, 64, 14, 14]
+inception4c.branch1.conv                 [2, 128, 14, 14]
+inception4c.branch2.0.conv               [2, 128, 14, 14]
+inception4c.branch2.1.conv               [2, 256, 14, 14]
+inception4c.branch3.0.conv               [2, 24, 14, 14]
+inception4c.branch3.1.conv               [2, 64, 14, 14]
+inception4c.branch4.0                    [2, 512, 14, 14]
+inception4c.branch4.1.conv               [2, 64, 14, 14]
+inception4d.branch1.conv                 [2, 112, 14, 14]
+inception4d.branch2.0.conv               [2, 144, 14, 14]
+inception4d.branch2.1.conv               [2, 288, 14, 14]
+inception4d.branch3.0.conv               [2, 32, 14, 14]
+inception4d.branch3.1.conv               [2, 64, 14, 14]
+inception4d.branch4.0                    [2, 512, 14, 14]
+inception4d.branch4.1.conv               [2, 64, 14, 14]
+aux2.conv.conv                           [2, 128, 4, 4]          
+aux2.conv.bn                             [2, 128, 4, 4]          
+aux2.conv.relu                           [2, 128, 4, 4]          
+aux2.fc1                                 [2, 1024]               
+aux2.relu                                [2, 1024]               
+aux2.dropout                             [2, 1024]               
+aux2.fc2                                 [2, 10] 
+inception4e.branch1.conv                 [2, 256, 14, 14]
+inception4e.branch2.0.conv               [2, 160, 14, 14]
+inception4e.branch2.1.conv               [2, 320, 14, 14]
+inception4e.branch3.0.conv               [2, 32, 14, 14]
+inception4e.branch3.1.conv               [2, 128, 14, 14]
+inception4e.branch4.0                    [2, 528, 14, 14]
+inception4e.branch4.1.conv               [2, 128, 14, 14]
+maxpool4                                 [2, 832, 7, 7]
+inception5a.branch1.conv                 [2, 256, 7, 7]
+inception5a.branch2.0.conv               [2, 160, 7, 7]
+inception5a.branch2.1.conv               [2, 320, 7, 7]
+inception5a.branch3.0.conv               [2, 32, 7, 7]
+inception5a.branch3.1.conv               [2, 128, 7, 7]
+inception5a.branch4.0                    [2, 832, 7, 7]
+inception5a.branch4.1.conv               [2, 128, 7, 7]
+inception5b.branch1.conv                 [2, 384, 7, 7]
+inception5b.branch2.0.conv               [2, 192, 7, 7]
+inception5b.branch2.1.conv               [2, 384, 7, 7]
+inception5b.branch3.0.conv               [2, 48, 7, 7]
+inception5b.branch3.1.conv               [2, 128, 7, 7]
+inception5b.branch4.0                    [2, 832, 7, 7]
+inception5b.branch4.1.conv               [2, 128, 7, 7]
+avgpool                                  [2, 1024, 1, 1]
+dropout                                  [2, 1024]
+fc                                       [2, 10]
