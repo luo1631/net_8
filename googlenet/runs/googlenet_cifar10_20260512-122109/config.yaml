@@ -1,0 +1,80 @@
+model:
+  name: GoogLeNet
+  num_classes: 10
+  alpha: 0.5
+  dropout: 0.2
+  dropout_aux: 0.7
+  aux_logits: true
+epochs: 45
+batch_size: 128
+device: cuda
+optimizer: SGD
+lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+scheduler: CosineAnnealingLR
+T_max: 45
+eta_min: 5.0e-05
+criterion: CrossEntropyLoss
+aux_loss_weight: 0.3
+dataset: CIFAR-10
+train_samples: 50000
+val_samples: 10000
+augmentation:
+  train:
+  - RandomHorizontalFlip:
+      p: 0.5
+  - RandomCrop:
+      size:
+      - 32
+      - 32
+      padding: 4
+  - ColorJitter:
+      brightness:
+      - 0.8
+      - 1.2
+      contrast:
+      - 0.8
+      - 1.2
+      saturation:
+      - 0.8
+      - 1.2
+      hue:
+      - -0.1
+      - 0.1
+  - ToTensor
+  - Normalize:
+      mean:
+      - 0.4914
+      - 0.4822
+      - 0.4465
+      std:
+      - 0.247
+      - 0.2435
+      - 0.2616
+  val:
+  - ToTensor
+  - Normalize:
+      mean:
+      - 0.4914
+      - 0.4822
+      - 0.4465
+      std:
+      - 0.247
+      - 0.2435
+      - 0.2616
+stats:
+  total_params: 2604350
+  trainable_params: 2604350
+  layers:
+    Conv2d: 59
+    BatchNorm2d: 59
+    ReLU: 61
+    MaxPool2d: 12
+    Inception: 9
+    InceptionAux: 2
+    Linear: 5
+    Dropout: 3
+    AdaptiveAvgPool2d: 1
+  model_size_mb: 9.93
+timestamp: 20260512-122109

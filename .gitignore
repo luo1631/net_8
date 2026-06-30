@@ -17,24 +17,15 @@ Thumbs.db
 # Jupyter
 .ipynb_checkpoints/
 
-# Data files (large)
+# Model checkpoints (too large, 7GB+)
+**/checkpoints/
+
+# Model weights
 *.pth
 *.pkl
 *.h5
 *.hdf5
+
+# Heavy numpy arrays (keep ignored unless LFS tracked)
 *.npz
 *.npy
-*.gz
-*.zip
-*.tar
-*.ubyte
-*.ubyte.gz
-
-# Dataset directories
-_data/FashionMNIST/
-_data/cifar-10-batches-py/
-_data/fra-eng/
-
-# Training runs (TensorBoard logs)
-**/runs/
-**/checkpoints/
